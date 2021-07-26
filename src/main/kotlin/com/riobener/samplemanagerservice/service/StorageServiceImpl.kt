@@ -64,4 +64,9 @@ class StorageServiceImpl : StorageService {
             .filter { path -> !path.equals(this.rootLocation) }
             .map(this.rootLocation::relativize)
     }
+
+    override fun getFiles(): Iterable<Sample> {
+        return sampleRepository.findAll()
+    }
+
 }

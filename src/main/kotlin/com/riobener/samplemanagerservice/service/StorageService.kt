@@ -13,5 +13,5 @@ interface StorageService {
     fun deleteAll()
     fun init()
     fun loadFiles(): Stream<Path>
-
+    fun getFiles():Iterable<Sample>
 }
